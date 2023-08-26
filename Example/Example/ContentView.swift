@@ -16,8 +16,9 @@ struct ContentView: View {
   @State var showingFlow = false
   @State var showingContentMode = false
   @State var showingPacking = false
-  @State var showingSpacing = false
-  
+    @State var showingSpacing = false
+    @State var pixelTest = false
+
 #if os(iOS)
   var body: some View {
     NavigationView {
@@ -42,6 +43,9 @@ struct ContentView: View {
         
         Button("Spacing") { self.showingSpacing.toggle() }
           .sheet(isPresented: $showingSpacing) { SpacingExample() }
+
+          Button("Pixels vs Points") { self.pixelTest.toggle() }
+            .sheet(isPresented: $pixelTest) { PixelTestExample() }
       }
       .navigationBarTitle(Text("ExyteGrid"), displayMode: .inline)
     }
@@ -57,7 +61,7 @@ struct ContentView: View {
         NavigationLink("Flow", destination: FlowExample())
         NavigationLink("Content mode", destination: ContentModeExample())
         NavigationLink("Packing", destination: PackingExample())
-        NavigationLink("Spacing", destination: SpacingExample())
+        NavigationLink("Pixels vs Points", destination: SpacingExample())
       }
     }
   }

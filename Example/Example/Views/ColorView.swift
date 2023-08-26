@@ -9,15 +9,21 @@
 import SwiftUI
 
 struct ColorView: View {
-    
+    @Environment(\.pixelLength) var pixelLength: CGFloat
+
     let color: GridColor
-    
-    init(_ color: GridColor) {
+    let cornerRadius: CGFloat
+    let debugSize: Bool
+
+    init(_ color: GridColor, cornerRadius: CGFloat = 5, debugSize: Bool = false) {
         self.color = color
+        self.cornerRadius = cornerRadius
+        self.debugSize = debugSize
     }
-    
-    var body: some View {
-        RoundedRectangle(cornerRadius: 5)
+
+    @ViewBuilder
+    var underlyingBody: some View {
+        RoundedRectangle(cornerRadius: cornerRadius)
             .fill(
                 LinearGradient(gradient:
                     Gradient(colors:
@@ -26,6 +32,25 @@ struct ColorView: View {
                                startPoint: .topLeading,
                                endPoint: .bottomTrailing)
         )
-        
+    }
+
+
+    var body: some View {
+        if debugSize {
+            GeometryReader { proxy in
+                ZStack {
+                    underlyingBody
+
+                    VStack {
+                        Text("Pixels: \(proxy.size.width / pixelLength, specifier: "%.3f")")
+                        Text("Points: \(proxy.size.width, specifier: "%.3f")")
+                    }
+                    .font(.caption2)
+
+                }
+            }
+        } else {
+            underlyingBody
+        }
     }
 }

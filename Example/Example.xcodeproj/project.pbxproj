@@ -26,6 +26,7 @@
 		36B11E512475539700CDAE27 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B11E502475539700CDAE27 /* Calculator.swift */; platformFilter = ios; };
 		36BECA6E29C82DF30077D30F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36AA6FE225304C110072AEBA /* Assets.xcassets */; };
 		36F6C22A2476D919001818F2 /* Color+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F6C2292476D919001818F2 /* Color+hex.swift */; };
+		D71B75122A99A3AA00246036 /* PixelTestExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71B75112A99A3AA00246036 /* PixelTestExample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		36F6C2292476D919001818F2 /* Color+hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+hex.swift"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* Grid_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grid_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		D71B75112A99A3AA00246036 /* PixelTestExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelTestExample.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				36161EBC247ECDAC0076173B /* SpacingExample.swift */,
 				36A6C9FE247FBC25005F5E7E /* FlowExample.swift */,
 				36A6CA00247FBC66005F5E7E /* ContentModeExample.swift */,
+				D71B75112A99A3AA00246036 /* PixelTestExample.swift */,
 				36A6CA06247FD813005F5E7E /* SpansExample.swift */,
 				36A6CA0824801EA6005F5E7E /* StartsExample.swift */,
 				366B25062474F78E00F1DD09 /* ContentView.swift */,
@@ -248,6 +251,7 @@
 				36161EBD247ECDAD0076173B /* SpacingExample.swift in Sources */,
 				36A6CA01247FBC67005F5E7E /* ContentModeExample.swift in Sources */,
 				36A6CA05247FBD05005F5E7E /* Helpers.swift in Sources */,
+				D71B75122A99A3AA00246036 /* PixelTestExample.swift in Sources */,
 				366A041E29C83BA40059EB43 /* App.swift in Sources */,
 				36F6C22A2476D919001818F2 /* Color+hex.swift in Sources */,
 				36B11E512475539700CDAE27 /* Calculator.swift in Sources */,
